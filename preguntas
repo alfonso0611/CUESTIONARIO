@@ -1,0 +1,100 @@
+
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace Practica_6
+{
+	/// <summary>
+	/// Description of MainForm.
+	/// </summary>
+	public partial class MainForm : Form
+	{
+		public MainForm()
+		{
+			
+			InitializeComponent();
+			
+			
+		}
+		
+		void Label2Click(object sender, EventArgs e)
+		{
+			
+		}
+		
+		void MainFormLoad(object sender, EventArgs e)
+		{
+			
+		}
+		
+		void Label6Click(object sender, EventArgs e)
+		{
+			
+		}
+		
+		void TextBox2TextChanged(object sender, EventArgs e)
+		{
+			
+		}
+		
+		void CheckBox1CheckedChanged(object sender, EventArgs e)
+		{
+			
+		}
+		
+		void Button1Click(object sender, EventArgs e)
+		{
+  string fecha = date.SelectionStart.ToShortDateString();	
+		int correc=0;
+		int codigo;
+		codigo = Convert.ToInt32(codigo1.Text);
+		string nombre;
+		nombre= codigo2.Text;
+		
+		
+		if(this.Guadalajara.Checked)
+			correc--;
+		if(this.DF.Checked)
+			correc++;
+		if(this.Mon.Checked)
+			correc--;
+		
+		
+		if(this.Portugal.Checked)
+			correc++;
+		if(this.au.Checked)
+			correc++;
+		if(this.rey.Checked)
+			correc--;
+		if(this.ma.Checked)
+			correc++;
+		if(this.chile.Checked)
+			correc--;
+		
+		
+		
+		
+		if(estado.Text=="32" )
+			correc++;
+		else
+			correc--;
+
+
+        string valorCalendario = date.SelectionRange.Start.ToShortDateString();
+        if (valorCalendario == "07/05/1945")
+        {
+            correc++;
+        }
+		
+		
+		
+		
+		MessageBox.Show("Codigo:"+codigo+ "\nnombre:"+nombre+"\nAciertos:"+correc);			
+			
+			
+			
+		}
+	}
+}
